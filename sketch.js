@@ -250,8 +250,9 @@ function draw() {
 
 
   // for transition
-  if(keyDown("space") && gameState === "start") {
+  if(touches.length > 0 || keyDown("space") && gameState === "start") {
    game.level1();/////////////////////////////////// undo the comment
+   touches = [];
    gameState = "level1"
   
   }
